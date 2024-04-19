@@ -4,7 +4,7 @@ const {getAllProducts,getAllProductsTesting,PostProduct,DleatProduct,UpdateProdu
 
 
 
-    router.route("/").get(getAllProducts);
+    router.route("/showposts").get(getAllProducts);
     router.route("/user").get(getAllProductsTesting);
     router.route("/").post(PostProduct)
     router.route("/").delete(DleatProduct)
