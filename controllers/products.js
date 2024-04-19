@@ -27,7 +27,9 @@ const getAllProducts=async(req,resp)=>{
 resp.status(200).json(data)
 };
 const getAllProductsTesting=async(req,resp)=>{
-    resp.status(200).json({msg:"i am get all getAllProductsTesting"})
+    
+
+    
     };
 
 
