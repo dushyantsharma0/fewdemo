@@ -29,7 +29,7 @@ app.post("/usersave",async(req,resp)=>{
               realdata.Posts.push(req.body.Posts);
             }
             const result = await realdata.save();
-            resp.status(200).json(result)
+            resp.send(result);
           } else {
             resp.json({msg:" This name already registered take another name "})
           }
@@ -41,7 +41,7 @@ app.post("/usersave",async(req,resp)=>{
              
             });
             const result = await newuser.save();
-            resp.status(200).json(result)
+            resp.send(result);
             
           } else {
             const newuser = new userSchma({
@@ -49,11 +49,12 @@ app.post("/usersave",async(req,resp)=>{
               bio: req.body.bio
             });
             const result = await newuser.save();
-            resp.status(200).json(result)
+          
             resp.send(result);
           }
         }
       } catch (error) {
+
         resp.status(200).json({msg:error.message})
        
       }
