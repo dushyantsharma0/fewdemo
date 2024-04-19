@@ -1,9 +1,0 @@
-[
-    {"name":"sohan","studentclass":"x","father":"tarun","mother":"rani","phone":9746557},
-    {"name":"golu", "studentclass":"x", "father":"akhil","mother":"anita","phone":9746557},
-    {"name":"akhil", "studentclass":"x+2", "father":"somnath","mother":"rani","phone":9746557},
-    {"name":"banti", "studentclass":"x+2", "father":"akshya","mother":"diya","phone":9746557},
-    {"name":"sohan", "studentclass":"x+2", "father":"rajiv","mother":"ritu","phone":6545678987},
-    {"name":"sarita", "studentclass":"x+1", "father":"balu","mother":"lisha","phone":976867876}
-  
-] 
