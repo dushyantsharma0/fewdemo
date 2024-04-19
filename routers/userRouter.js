@@ -29,5 +29,9 @@ router.get('/user', async function(req, res){
     ]);
     res.send(data);
   });
+  router.get('/user2', async function(req, res){
+    const data = await PostSchema.find()
+    res.send(data);
+  });
 
 module.exports=router
