@@ -6,7 +6,9 @@ name:{
     type:String,
     unique:true,
 },
+password:String,
 bio:String,
+
 Posts:[{type:mongoose.Types.ObjectId,ref:'Post'}]
 
 })

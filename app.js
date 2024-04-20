@@ -18,6 +18,27 @@ app.get("/",(req ,resp)=>{
 app.use(cors());
 app.use(express.json())
 
+app.post("/login",async(req,resp)=>{
+try {
+  const realdata = await userSchma.findOne({ name: req.body.name });
+  if (realdata) {
+    if(realdata.password==req.body.password){
+      resp.send(realdata)
+    }else{
+      resp.json({msg:" wrong email and password"})
+    }
+  }else{
+    resp.json({msg:" wrong email and password"})
+  }
+  
+} catch (error) {
+    resp.status(200).json({msg:error.message})
+}
+})
+
+
+
+
 app.post("/usersave",async(req,resp)=>{
     try {
         const realdata = await userSchma.findOne({ name: req.body.name });
@@ -46,7 +67,8 @@ app.post("/usersave",async(req,resp)=>{
           } else {
             const newuser = new userSchma({
               name: req.body.name,
-              bio: req.body.bio
+              bio: req.body.bio,
+              password: req.body.password
             });
             const result = await newuser.save();
           
